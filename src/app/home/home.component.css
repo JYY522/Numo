@@ -1,0 +1,25 @@
+
+.button {
+    background: #C28174;
+    border: none;
+    color: white;
+    padding:5px 15px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    }
+.button:hover {
+    background:rgb(156, 104, 94);
+    }
+    h3 button{
+      margin-left:50px;
+    }
+
+li{
+    list-style-type:none;
+    background:rgb(247, 229, 225);
+    margin-bottom:1em;
+    display:flex;
+    flex-direction:column;
+    border:1px solid #C28174;
+}

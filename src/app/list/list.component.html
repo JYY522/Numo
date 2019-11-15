@@ -1,0 +1,67 @@
+<div class="container">
+        <label>Type:</label>
+        <select [(ngModel)]="type" > 
+                <option value="" selected>Null</option>
+                <option value="cooking" selected>cooking</option>
+                <option value="social">social</option>
+                <option value="education">education</option>
+                <option value="busywork">busywork</option>
+                <option value="relaxation">relaxation</option>
+                <option value="charity">charity</option>
+                <option value="music">music</option>
+                <option value="recreational">recreational</option>
+                <option value="diy">diy</option>
+              </select>
+
+    <label>participants</label>
+        <input type="text" [(ngModel)]="participants" value={{price}} />
+    <label>minprice</label>
+        <input type="number" min="0" max="1"[(ngModel)]="minprice" value={{minprice}}  step="0.1"/>
+      <label>maxprice</label>
+        <input type="number" min="0" max="1"[(ngModel)]="maxprice" value={{maxprice}} step="0.1" />
+        <button class="button" id="button3" (click)="search()">Find</button>
+        
+
+ </div>        
+<div id="container">                   
+<div>
+        <h1 class="logo">Activity <i class="fa fa-plus"></i></h1>
+    
+        <ol *ngIf="ac">
+            <li>Activity: {{ac.activity}}</li>
+            <li>Accessibility: {{ac.accessibility}}</li>
+            <li>Type: {{ac.type}}</li>
+            <li>Participants: {{ac.participants}}</li>
+            <li>Price: {{ac.price}}</li>
+            <li>Key:{{ac.key}}</li>
+        </ol>  
+</div>
+       
+        <div>
+        <button class ="button" id ="button1" (click)="refresh()" >Change one!</button> 
+        <button class ="button" id ="button2"  (click)="save(ac)">Save!</button> 
+    </div>
+  
+    </div>
+<div id="share">
+    <div class="row">
+        <div class="col">
+            <fb-like url='http://www.boredapi.com/api/activity/?key={{ac.key}}'></fb-like>
+        </div>
+        <div class="col">
+          <google-plus url='http://www.boredapi.com/api/activity/?key={{ac.key}}'></google-plus>
+        </div>
+        <google-plus url='http://www.boredapi.com/api/activity/?key={{ac.key}}'></google-plus>
+        <div class="col">
+            <google-plus url='http://www.boredapi.com/api/activity/?key={{ac.key}}'></google-plus>
+        </div>
+        <div class="col">
+            <tweet url='http://www.boredapi.com/api/activity/?key={{ac.key}}'></tweet>
+        </div>
+        <div class="col">
+            <linkedin-share url='http://www.boredapi.com/api/activity/?key={{ac.key}}'></linkedin-share>
+        </div>
+    </div>
+</div>
+   
+

@@ -1,0 +1,15 @@
+<h3>Collection      
+        <button class ="button" id ="button"  (click)="remove()">remove all</button> 
+</h3>
+
+
+<div class="row" *ngIf="items">
+    <li  class="col-sm-6 col-lg-3 img-thumbnail" *ngFor="let ac of items">
+    <p>Activity: {{ ac.activity}}</p>
+    <p> Type: {{ac.type}}</p>
+    <p> Participants: {{ac.participants}}</p>
+    <p>Price: {{ac.price}}</p>
+    <p>Key:{{ac.key}}</p>  
+</li>
+
+</div>

@@ -1,0 +1,13 @@
+
+.container{
+	width:80%;
+	margin:0 auto;
+}
+
+#mainnav .nav-link{
+color:white;
+margin-left:15px;
+}
+#mainnav .nav-link:hover{
+	color:rgb(214, 171, 171);
+}
