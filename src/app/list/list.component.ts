@@ -37,7 +37,6 @@ export class ListComponent implements OnInit {
     search() {
       this._api.searchActivity(this.participants,this.type,this.minprice,this.maxprice).subscribe(data => {
       this.ac = data;
-       
       });
       
     }
